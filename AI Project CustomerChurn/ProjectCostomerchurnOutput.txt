@@ -1,0 +1,1032 @@
+
+C:\Users\Gaurav\Desktop\Intellipaat Assignment\Artificial Intelligent\datasets\AI Assigment>python ProjectCustomerChurn.py
+   customerID  gender  SeniorCitizen Partner Dependents  tenure  ...        Contract PaperlessBilling              PaymentMethod MonthlyCharges TotalCharges Churn
+0  7590-VHVEG  Female              0     Yes         No       1  ...  Month-to-month              Yes           Electronic check          29.85        29.85    No
+1  5575-GNVDE    Male              0      No         No      34  ...        One year               No               Mailed check          56.95       1889.5    No
+2  3668-QPYBK    Male              0      No         No       2  ...  Month-to-month              Yes               Mailed check          53.85       108.15   Yes
+3  7795-CFOCW    Male              0      No         No      45  ...        One year               No  Bank transfer (automatic)          42.30      1840.75    No
+4  9237-HQITU  Female              0      No         No       2  ...  Month-to-month              Yes           Electronic check          70.70       151.65   Yes
+
+[5 rows x 21 columns]
+       SeniorCitizen       tenure  MonthlyCharges
+count    7043.000000  7043.000000     7043.000000
+mean        0.162147    32.371149       64.761692
+std         0.368612    24.559481       30.090047
+min         0.000000     0.000000       18.250000
+25%         0.000000     9.000000       35.500000
+50%         0.000000    29.000000       70.350000
+75%         0.000000    55.000000       89.850000
+max         1.000000    72.000000      118.750000
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 7043 entries, 0 to 7042
+Data columns (total 21 columns):
+ #   Column            Non-Null Count  Dtype
+---  ------            --------------  -----
+ 0   customerID        7043 non-null   object
+ 1   gender            7043 non-null   object
+ 2   SeniorCitizen     7043 non-null   int64
+ 3   Partner           7043 non-null   object
+ 4   Dependents        7043 non-null   object
+ 5   tenure            7043 non-null   int64
+ 6   PhoneService      7043 non-null   object
+ 7   MultipleLines     7043 non-null   object
+ 8   InternetService   7043 non-null   object
+ 9   OnlineSecurity    7043 non-null   object
+ 10  OnlineBackup      7043 non-null   object
+ 11  DeviceProtection  7043 non-null   object
+ 12  TechSupport       7043 non-null   object
+ 13  StreamingTV       7043 non-null   object
+ 14  StreamingMovies   7043 non-null   object
+ 15  Contract          7043 non-null   object
+ 16  PaperlessBilling  7043 non-null   object
+ 17  PaymentMethod     7043 non-null   object
+ 18  MonthlyCharges    7043 non-null   float64
+ 19  TotalCharges      7043 non-null   object
+ 20  Churn             7043 non-null   object
+dtypes: float64(1), int64(2), object(18)
+memory usage: 1.1+ MB
+None
+Total_male_customers: 3555
+Total_dsl_customers: 2421
+New Cutomers:
+       customerID  gender  SeniorCitizen Partner Dependents  tenure  ...        Contract PaperlessBilling PaymentMethod MonthlyCharges TotalCharges Churn
+139   0390-DCFDQ  Female              1     Yes         No       1  ...  Month-to-month              Yes  Mailed check          70.45        70.45   Yes
+176   2656-FMOKZ  Female              1      No         No      15  ...  Month-to-month              Yes  Mailed check          74.45       1145.7   Yes
+267   3197-ARFOY  Female              1      No         No      19  ...  Month-to-month              Yes  Mailed check         105.00      2007.25    No
+451   5760-WRAHC  Female              1      No         No      22  ...  Month-to-month              Yes  Mailed check          69.75       1545.4    No
+470   4933-IKULF  Female              1      No         No      17  ...        One year               No  Mailed check          20.65        330.6    No
+694   2682-KEVRP  Female              1      No         No      22  ...        One year              Yes  Mailed check          20.05          417    No
+747   3966-HRMZA  Female              1      No         No       3  ...  Month-to-month               No  Mailed check          75.05        202.9    No
+947   9904-EHEVJ  Female              1     Yes        Yes      32  ...  Month-to-month              Yes  Mailed check          91.35      2896.55    No
+1029  4184-TJFAN  Female              1     Yes        Yes       3  ...  Month-to-month              Yes  Mailed check          88.30       273.75   Yes
+1112  2176-LVPNX  Female              1      No         No      71  ...        Two year               No  Mailed check          89.85      6293.45    No
+1513  0661-XEYAN  Female              1      No         No       1  ...  Month-to-month              Yes  Mailed check          25.80         25.8   Yes
+1811  2070-XYMFH  Female              1      No         No      23  ...  Month-to-month              Yes  Mailed check          79.35       1835.3    No
+1831  3402-XRIUO  Female              1     Yes         No      22  ...  Month-to-month              Yes  Mailed check          63.55       1381.8    No
+1864  7105-MXJLL  Female              1     Yes         No      26  ...        One year               No  Mailed check          60.70       1597.4    No
+1891  4193-ORFCL  Female              1      No         No       1  ...  Month-to-month               No  Mailed check          45.10         45.1   Yes
+2037  8309-IEYJD  Female              1      No         No       1  ...  Month-to-month              Yes  Mailed check          70.60         70.6    No
+2344  9796-MVYXX  Female              1      No         No      14  ...        Two year               No  Mailed check          39.70       692.35    No
+2441  9050-IKDZA  Female              1      No         No       2  ...  Month-to-month               No  Mailed check          81.50       162.55    No
+2674  1855-CFULU  Female              1      No         No       4  ...  Month-to-month               No  Mailed check          20.05        91.45    No
+3005  0516-QREYC  Female              1      No         No      24  ...  Month-to-month              Yes  Mailed check          20.30       459.95    No
+3185  9907-SWKKF  Female              1      No         No       1  ...  Month-to-month               No  Mailed check          25.05        25.05   Yes
+3341  1125-SNVCK  Female              1      No         No      49  ...  Month-to-month               No  Mailed check          43.80      2106.05    No
+3373  2516-VQRRV  Female              1      No         No       2  ...  Month-to-month              Yes  Mailed check          75.45        158.4   Yes
+3374  7580-UGXNC  Female              1      No         No       2  ...  Month-to-month               No  Mailed check          54.85        104.2   Yes
+3454  6773-LQTVT  Female              1     Yes        Yes      29  ...  Month-to-month              Yes  Mailed check          35.65      1025.15    No
+3893  5816-SCGFC  Female              1      No         No       7  ...  Month-to-month              Yes  Mailed check          51.30       419.35    No
+4258  9360-AHGNL  Female              1     Yes         No      43  ...        One year              Yes  Mailed check         109.55      4830.25   Yes
+4382  2277-VWCNI  Female              1      No         No       4  ...  Month-to-month               No  Mailed check          48.75       179.85    No
+4541  9058-CBREO  Female              1      No         No       1  ...  Month-to-month               No  Mailed check          50.55        50.55   Yes
+4542  9029-FEGVJ  Female              1     Yes         No      32  ...  Month-to-month               No  Mailed check          79.30         2570    No
+4673  6402-ZFPPI  Female              1      No         No      25  ...  Month-to-month              Yes  Mailed check         102.80       2660.2   Yes
+5183  8988-ECPJR  Female              1     Yes        Yes      34  ...  Month-to-month              Yes  Mailed check          79.60       2718.3   Yes
+5251  8485-GJCDN  Female              1      No         No       5  ...  Month-to-month              Yes  Mailed check          69.05        318.5   Yes
+5319  9866-OCCKE  Female              1     Yes         No      72  ...        Two year              Yes  Mailed check         109.75      8075.35    No
+5341  2982-IHMFT  Female              1      No         No       1  ...  Month-to-month              Yes  Mailed check          74.45        74.45   Yes
+5437  7000-WCEVQ  Female              1      No         No      20  ...  Month-to-month              Yes  Mailed check          61.60      1174.35   Yes
+5476  6060-DRTNL  Female              1      No         No       5  ...  Month-to-month              Yes  Mailed check          84.85       415.55   Yes
+5569  0013-EXCHZ  Female              1     Yes         No       3  ...  Month-to-month              Yes  Mailed check          83.90        267.4   Yes
+5680  6982-UQZLY  Female              1     Yes         No       1  ...  Month-to-month              Yes  Mailed check          20.85        20.85   Yes
+5743  2384-OVPSA  Female              1      No         No      38  ...        Two year               No  Mailed check          20.20        735.9    No
+5757  5539-HIVAK  Female              1     Yes         No      28  ...  Month-to-month               No  Mailed check          25.70        734.6    No
+5792  3500-RMZLT  Female              1      No         No      15  ...  Month-to-month              Yes  Mailed check          96.30      1426.75   Yes
+6031  0282-NVSJS  Female              1     Yes        Yes      12  ...  Month-to-month              Yes  Mailed check          29.30        355.9    No
+6042  4750-UKWJK  Female              1     Yes         No      37  ...        One year               No  Mailed check          19.60        727.8    No
+6147  6383-ZTSIW  Female              1     Yes         No      39  ...        One year               No  Mailed check          99.10      3877.95    No
+6178  3719-TDVQB  Female              1     Yes         No      54  ...        Two year              Yes  Mailed check          18.95       1031.1    No
+6219  1496-GGSUK  Female              1      No         No       1  ...  Month-to-month              Yes  Mailed check          25.70         25.7   Yes
+6231  3296-SILRA  Female              1     Yes         No       1  ...  Month-to-month              Yes  Mailed check          76.40         76.4   Yes
+6534  5195-KPUNQ  Female              1      No         No      53  ...        One year              Yes  Mailed check          96.75      5206.55    No
+6581  2453-SAFNS  Female              1      No         No      54  ...        One year               No  Mailed check          72.10      3886.05    No
+
+[50 rows x 21 columns]
+New Customer:
+       customerID  gender  SeniorCitizen Partner Dependents  tenure  ...        Contract PaperlessBilling     PaymentMethod MonthlyCharges TotalCharges Churn
+0     7590-VHVEG  Female              0     Yes         No       1  ...  Month-to-month              Yes  Electronic check          29.85        29.85    No
+2     3668-QPYBK    Male              0      No         No       2  ...  Month-to-month              Yes      Mailed check          53.85       108.15   Yes
+4     9237-HQITU  Female              0      No         No       2  ...  Month-to-month              Yes  Electronic check          70.70       151.65   Yes
+5     9305-CDSKC  Female              0      No         No       8  ...  Month-to-month              Yes  Electronic check          99.65       820.50   Yes
+7     6713-OKOMC  Female              0      No         No      10  ...  Month-to-month               No      Mailed check          29.75       301.90    No
+...          ...     ...            ...     ...        ...     ...  ...             ...              ...               ...            ...          ...   ...
+7029  2235-DWLJU  Female              1      No         No       6  ...  Month-to-month              Yes  Electronic check          44.40       263.05    No
+7030  0871-OPBXW  Female              0      No         No       2  ...  Month-to-month              Yes      Mailed check          20.05        39.25    No
+7032  6894-LFHLY    Male              1      No         No       1  ...  Month-to-month              Yes  Electronic check          75.75        75.75   Yes
+7040  4801-JZAZL  Female              0     Yes        Yes      11  ...  Month-to-month              Yes  Electronic check          29.60       346.45    No
+7041  8361-LTMKD    Male              1     Yes         No       4  ...  Month-to-month              Yes      Mailed check          74.40       306.60   Yes
+
+[2233 rows x 21 columns]
+1. Sequential Model
+
+2023-09-26 18:40:33.365086: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/150
+177/177 [==============================] - 2s 2ms/step - loss: 0.5713 - accuracy: 0.7531
+Epoch 2/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5196 - accuracy: 0.7529
+Epoch 3/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5165 - accuracy: 0.7377
+Epoch 4/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5194 - accuracy: 0.7490
+Epoch 5/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5164 - accuracy: 0.7355
+Epoch 6/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5155 - accuracy: 0.7401
+Epoch 7/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5164 - accuracy: 0.7432
+Epoch 8/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5167 - accuracy: 0.7345
+Epoch 9/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5176 - accuracy: 0.7419
+Epoch 10/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5163 - accuracy: 0.7428
+Epoch 11/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 12/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5160 - accuracy: 0.7345
+Epoch 13/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5161 - accuracy: 0.7371
+Epoch 14/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5180 - accuracy: 0.7350
+Epoch 15/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5171 - accuracy: 0.7348
+Epoch 16/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5163 - accuracy: 0.7339
+Epoch 17/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5173 - accuracy: 0.7354
+Epoch 18/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5161 - accuracy: 0.7437
+Epoch 19/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5197 - accuracy: 0.7492
+Epoch 20/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5163 - accuracy: 0.7359
+Epoch 21/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5160 - accuracy: 0.7348
+Epoch 22/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5170 - accuracy: 0.7536
+Epoch 23/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5166 - accuracy: 0.7407
+Epoch 24/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5202 - accuracy: 0.7417
+Epoch 25/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5177 - accuracy: 0.7354
+Epoch 26/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5161 - accuracy: 0.7368
+Epoch 27/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5174 - accuracy: 0.7336
+Epoch 28/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5162 - accuracy: 0.7346
+Epoch 29/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5166 - accuracy: 0.7398
+Epoch 30/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5176 - accuracy: 0.7371
+Epoch 31/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7387
+Epoch 32/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5154 - accuracy: 0.7378
+Epoch 33/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5158 - accuracy: 0.7407
+Epoch 34/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5162 - accuracy: 0.7332
+Epoch 35/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5156 - accuracy: 0.7417
+Epoch 36/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5161 - accuracy: 0.7384
+Epoch 37/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5168 - accuracy: 0.7414
+Epoch 38/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5169 - accuracy: 0.7354
+Epoch 39/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5162 - accuracy: 0.7345
+Epoch 40/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5165 - accuracy: 0.7345
+Epoch 41/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5168 - accuracy: 0.7359
+Epoch 42/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5156 - accuracy: 0.7345
+Epoch 43/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5148 - accuracy: 0.7345
+Epoch 44/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5175 - accuracy: 0.7345
+Epoch 45/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7386
+Epoch 46/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5169 - accuracy: 0.7425
+Epoch 47/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7389
+Epoch 48/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5156 - accuracy: 0.7345
+Epoch 49/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5152 - accuracy: 0.7345
+Epoch 50/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5160 - accuracy: 0.7409
+Epoch 51/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5176 - accuracy: 0.7345
+Epoch 52/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5165 - accuracy: 0.7345
+Epoch 53/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5160 - accuracy: 0.7345
+Epoch 54/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5176 - accuracy: 0.7345
+Epoch 55/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5158 - accuracy: 0.7345
+Epoch 56/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5169 - accuracy: 0.7345
+Epoch 57/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5158 - accuracy: 0.7345
+Epoch 58/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5165 - accuracy: 0.7345
+Epoch 59/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5155 - accuracy: 0.7345
+Epoch 60/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5167 - accuracy: 0.7345
+Epoch 61/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 62/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5162 - accuracy: 0.7345
+Epoch 63/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5162 - accuracy: 0.7345
+Epoch 64/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7345
+Epoch 65/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5147 - accuracy: 0.7345
+Epoch 66/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7345
+Epoch 67/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5161 - accuracy: 0.7345
+Epoch 68/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5161 - accuracy: 0.7345
+Epoch 69/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5159 - accuracy: 0.7345
+Epoch 70/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5154 - accuracy: 0.7345
+Epoch 71/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5162 - accuracy: 0.7345
+Epoch 72/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5162 - accuracy: 0.7345
+Epoch 73/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5157 - accuracy: 0.7345
+Epoch 74/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5158 - accuracy: 0.7345
+Epoch 75/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 76/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 77/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7345
+Epoch 78/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5158 - accuracy: 0.7345
+Epoch 79/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7345
+Epoch 80/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 81/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5158 - accuracy: 0.7345
+Epoch 82/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5158 - accuracy: 0.7345
+Epoch 83/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 84/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5169 - accuracy: 0.7345
+Epoch 85/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5157 - accuracy: 0.7345
+Epoch 86/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5155 - accuracy: 0.7345
+Epoch 87/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5157 - accuracy: 0.7345
+Epoch 88/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 89/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 90/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5150 - accuracy: 0.7345
+Epoch 91/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5146 - accuracy: 0.7345
+Epoch 92/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5152 - accuracy: 0.7345
+Epoch 93/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 94/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 95/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5161 - accuracy: 0.7345
+Epoch 96/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 97/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5150 - accuracy: 0.7345
+Epoch 98/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 99/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 100/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5152 - accuracy: 0.7345
+Epoch 101/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5145 - accuracy: 0.7345
+Epoch 102/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5145 - accuracy: 0.7345
+Epoch 103/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5148 - accuracy: 0.7345
+Epoch 104/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 105/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7345
+Epoch 106/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5165 - accuracy: 0.7345
+Epoch 107/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5147 - accuracy: 0.7345
+Epoch 108/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5154 - accuracy: 0.7345
+Epoch 109/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5148 - accuracy: 0.7345
+Epoch 110/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5154 - accuracy: 0.7345
+Epoch 111/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 112/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5148 - accuracy: 0.7345
+Epoch 113/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 114/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5147 - accuracy: 0.7345
+Epoch 115/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5153 - accuracy: 0.7345
+Epoch 116/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5147 - accuracy: 0.7345
+Epoch 117/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5146 - accuracy: 0.7345
+Epoch 118/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5145 - accuracy: 0.7345
+Epoch 119/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 120/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5140 - accuracy: 0.7345
+Epoch 121/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 122/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5147 - accuracy: 0.7345
+Epoch 123/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5148 - accuracy: 0.7345
+Epoch 124/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5157 - accuracy: 0.7345
+Epoch 125/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5146 - accuracy: 0.7345
+Epoch 126/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 127/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5145 - accuracy: 0.7345
+Epoch 128/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5144 - accuracy: 0.7345
+Epoch 129/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 130/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5142 - accuracy: 0.7345
+Epoch 131/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5150 - accuracy: 0.7345
+Epoch 132/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 133/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5144 - accuracy: 0.7345
+Epoch 134/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5142 - accuracy: 0.7345
+Epoch 135/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5145 - accuracy: 0.7345
+Epoch 136/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 137/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5145 - accuracy: 0.7345
+Epoch 138/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5146 - accuracy: 0.7345
+Epoch 139/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5140 - accuracy: 0.7345
+Epoch 140/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5142 - accuracy: 0.7345
+Epoch 141/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5138 - accuracy: 0.7345
+Epoch 142/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5151 - accuracy: 0.7345
+Epoch 143/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 144/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5139 - accuracy: 0.7345
+Epoch 145/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 146/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5140 - accuracy: 0.7345
+Epoch 147/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5143 - accuracy: 0.7345
+Epoch 148/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5142 - accuracy: 0.7345
+Epoch 149/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5149 - accuracy: 0.7345
+Epoch 150/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5137 - accuracy: 0.7345
+45/45 [==============================] - 0s 1ms/step
+2.nd Model with Dropout layers
+
+Epoch 1/150
+177/177 [==============================] - 2s 2ms/step - loss: 9.2367 - accuracy: 0.4746
+Epoch 2/150
+177/177 [==============================] - 0s 2ms/step - loss: 2.6896 - accuracy: 0.6427
+Epoch 3/150
+177/177 [==============================] - 0s 2ms/step - loss: 1.8521 - accuracy: 0.6523
+Epoch 4/150
+177/177 [==============================] - 0s 2ms/step - loss: 1.2300 - accuracy: 0.6564
+Epoch 5/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.9481 - accuracy: 0.6537
+Epoch 6/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.7592 - accuracy: 0.6878
+Epoch 7/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.7014 - accuracy: 0.7016
+Epoch 8/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.6633 - accuracy: 0.7084
+Epoch 9/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.6324 - accuracy: 0.7137
+Epoch 10/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.6153 - accuracy: 0.7238
+Epoch 11/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.6036 - accuracy: 0.7219
+Epoch 12/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5867 - accuracy: 0.7229
+Epoch 13/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5625 - accuracy: 0.7290
+Epoch 14/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5777 - accuracy: 0.7275
+Epoch 15/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5727 - accuracy: 0.7288
+Epoch 16/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5592 - accuracy: 0.7302
+Epoch 17/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5655 - accuracy: 0.7281
+Epoch 18/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5600 - accuracy: 0.7293
+Epoch 19/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5521 - accuracy: 0.7288
+Epoch 20/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5497 - accuracy: 0.7300
+Epoch 21/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5464 - accuracy: 0.7315
+Epoch 22/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5535 - accuracy: 0.7313
+Epoch 23/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5523 - accuracy: 0.7320
+Epoch 24/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5514 - accuracy: 0.7322
+Epoch 25/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5470 - accuracy: 0.7316
+Epoch 26/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5455 - accuracy: 0.7322
+Epoch 27/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5480 - accuracy: 0.7329
+Epoch 28/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5450 - accuracy: 0.7336
+Epoch 29/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5413 - accuracy: 0.7332
+Epoch 30/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5437 - accuracy: 0.7339
+Epoch 31/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5434 - accuracy: 0.7336
+Epoch 32/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5459 - accuracy: 0.7336
+Epoch 33/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5407 - accuracy: 0.7334
+Epoch 34/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5395 - accuracy: 0.7330
+Epoch 35/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5428 - accuracy: 0.7334
+Epoch 36/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5410 - accuracy: 0.7336
+Epoch 37/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5456 - accuracy: 0.7341
+Epoch 38/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5419 - accuracy: 0.7341
+Epoch 39/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5443 - accuracy: 0.7339
+Epoch 40/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5401 - accuracy: 0.7338
+Epoch 41/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5381 - accuracy: 0.7345
+Epoch 42/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5386 - accuracy: 0.7336
+Epoch 43/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5388 - accuracy: 0.7343
+Epoch 44/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5440 - accuracy: 0.7338
+Epoch 45/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5413 - accuracy: 0.7343
+Epoch 46/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5431 - accuracy: 0.7343
+Epoch 47/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5384 - accuracy: 0.7341
+Epoch 48/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5452 - accuracy: 0.7345
+Epoch 49/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5413 - accuracy: 0.7341
+Epoch 50/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5400 - accuracy: 0.7343
+Epoch 51/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5399 - accuracy: 0.7343
+Epoch 52/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5422 - accuracy: 0.7343
+Epoch 53/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5394 - accuracy: 0.7346
+Epoch 54/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5424 - accuracy: 0.7345
+Epoch 55/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5442 - accuracy: 0.7343
+Epoch 56/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5417 - accuracy: 0.7343
+Epoch 57/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5431 - accuracy: 0.7345
+Epoch 58/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5387 - accuracy: 0.7343
+Epoch 59/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5440 - accuracy: 0.7345
+Epoch 60/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5411 - accuracy: 0.7345
+Epoch 61/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5413 - accuracy: 0.7345
+Epoch 62/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5408 - accuracy: 0.7345
+Epoch 63/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5454 - accuracy: 0.7345
+Epoch 64/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5412 - accuracy: 0.7345
+Epoch 65/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5416 - accuracy: 0.7345
+Epoch 66/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5406 - accuracy: 0.7345
+Epoch 67/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5473 - accuracy: 0.7345
+Epoch 68/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5405 - accuracy: 0.7345
+Epoch 69/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5383 - accuracy: 0.7345
+Epoch 70/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5428 - accuracy: 0.7345
+Epoch 71/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5401 - accuracy: 0.7345
+Epoch 72/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5417 - accuracy: 0.7345
+Epoch 73/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5418 - accuracy: 0.7345
+Epoch 74/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5448 - accuracy: 0.7345
+Epoch 75/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5373 - accuracy: 0.7345
+Epoch 76/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5384 - accuracy: 0.7345
+Epoch 77/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5398 - accuracy: 0.7345
+Epoch 78/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5433 - accuracy: 0.7345
+Epoch 79/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5409 - accuracy: 0.7345
+Epoch 80/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5397 - accuracy: 0.7345
+Epoch 81/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5425 - accuracy: 0.7345
+Epoch 82/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5398 - accuracy: 0.7345
+Epoch 83/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5395 - accuracy: 0.7345
+Epoch 84/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5397 - accuracy: 0.7345
+Epoch 85/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5410 - accuracy: 0.7345
+Epoch 86/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5383 - accuracy: 0.7345
+Epoch 87/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5378 - accuracy: 0.7345
+Epoch 88/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5367 - accuracy: 0.7345
+Epoch 89/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5394 - accuracy: 0.7345
+Epoch 90/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5370 - accuracy: 0.7345
+Epoch 91/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5390 - accuracy: 0.7345
+Epoch 92/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5377 - accuracy: 0.7345
+Epoch 93/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5404 - accuracy: 0.7345
+Epoch 94/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5391 - accuracy: 0.7345
+Epoch 95/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5324 - accuracy: 0.7345
+Epoch 96/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5363 - accuracy: 0.7345
+Epoch 97/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5387 - accuracy: 0.7345
+Epoch 98/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5382 - accuracy: 0.7345
+Epoch 99/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5382 - accuracy: 0.7345
+Epoch 100/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5371 - accuracy: 0.7345
+Epoch 101/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5376 - accuracy: 0.7345
+Epoch 102/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5418 - accuracy: 0.7345
+Epoch 103/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5352 - accuracy: 0.7345
+Epoch 104/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5351 - accuracy: 0.7345
+Epoch 105/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5382 - accuracy: 0.7345
+Epoch 106/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5406 - accuracy: 0.7345
+Epoch 107/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5338 - accuracy: 0.7345
+Epoch 108/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5360 - accuracy: 0.7345
+Epoch 109/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5382 - accuracy: 0.7345
+Epoch 110/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5425 - accuracy: 0.7345
+Epoch 111/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5366 - accuracy: 0.7345
+Epoch 112/150
+177/177 [==============================] - 0s 3ms/step - loss: 0.5370 - accuracy: 0.7345
+Epoch 113/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5391 - accuracy: 0.7345
+Epoch 114/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5381 - accuracy: 0.7345
+Epoch 115/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5367 - accuracy: 0.7345
+Epoch 116/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5374 - accuracy: 0.7345
+Epoch 117/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5407 - accuracy: 0.7345
+Epoch 118/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5384 - accuracy: 0.7345
+Epoch 119/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5349 - accuracy: 0.7345
+Epoch 120/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5340 - accuracy: 0.7345
+Epoch 121/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5415 - accuracy: 0.7345
+Epoch 122/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5414 - accuracy: 0.7345
+Epoch 123/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5378 - accuracy: 0.7345
+Epoch 124/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5396 - accuracy: 0.7345
+Epoch 125/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5380 - accuracy: 0.7345
+Epoch 126/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5370 - accuracy: 0.7345
+Epoch 127/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5355 - accuracy: 0.7345
+Epoch 128/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5395 - accuracy: 0.7345
+Epoch 129/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5355 - accuracy: 0.7345
+Epoch 130/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5375 - accuracy: 0.7345
+Epoch 131/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5397 - accuracy: 0.7345
+Epoch 132/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5370 - accuracy: 0.7345
+Epoch 133/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5427 - accuracy: 0.7345
+Epoch 134/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5362 - accuracy: 0.7345
+Epoch 135/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5366 - accuracy: 0.7345
+Epoch 136/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5376 - accuracy: 0.7345
+Epoch 137/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5416 - accuracy: 0.7345
+Epoch 138/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5390 - accuracy: 0.7345
+Epoch 139/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5380 - accuracy: 0.7345
+Epoch 140/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5397 - accuracy: 0.7345
+Epoch 141/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5375 - accuracy: 0.7345
+Epoch 142/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5351 - accuracy: 0.7345
+Epoch 143/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5391 - accuracy: 0.7345
+Epoch 144/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5377 - accuracy: 0.7345
+Epoch 145/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5362 - accuracy: 0.7345
+Epoch 146/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5416 - accuracy: 0.7345
+Epoch 147/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5400 - accuracy: 0.7345
+Epoch 148/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5365 - accuracy: 0.7345
+Epoch 149/150
+177/177 [==============================] - 0s 3ms/step - loss: 0.5362 - accuracy: 0.7345
+Epoch 150/150
+177/177 [==============================] - 0s 2ms/step - loss: 0.5343 - accuracy: 0.7345
+45/45 [==============================] - 0s 1ms/step
+3.rd Model With multiple features
+
+Epoch 1/150
+177/177 [==============================] - 2s 2ms/step - loss: nan - accuracy: 0.7210
+Epoch 2/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 3/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 4/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 5/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 6/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 7/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 8/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 9/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 10/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 11/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 12/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 13/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 14/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 15/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 16/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 17/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 18/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 19/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 20/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 21/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 22/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 23/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 24/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 25/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 26/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 27/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 28/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 29/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 30/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 31/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 32/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 33/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 34/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 35/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 36/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 37/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 38/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 39/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 40/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 41/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 42/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 43/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 44/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 45/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 46/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 47/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 48/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 49/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 50/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 51/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 52/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 53/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 54/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 55/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 56/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 57/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 58/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 59/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 60/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 61/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 62/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 63/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 64/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 65/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 66/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 67/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 68/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 69/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 70/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 71/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 72/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 73/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 74/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 75/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 76/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 77/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 78/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 79/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 80/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 81/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 82/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 83/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 84/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 85/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 86/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 87/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 88/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 89/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 90/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 91/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 92/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 93/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 94/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 95/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 96/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 97/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 98/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 99/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 100/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 101/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 102/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 103/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 104/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 105/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 106/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 107/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 108/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 109/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 110/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 111/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 112/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 113/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 114/150
+177/177 [==============================] - 0s 3ms/step - loss: nan - accuracy: 0.7345
+Epoch 115/150
+177/177 [==============================] - 0s 3ms/step - loss: nan - accuracy: 0.7345
+Epoch 116/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 117/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 118/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 119/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 120/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 121/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 122/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 123/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 124/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 125/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 126/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 127/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 128/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 129/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 130/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 131/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 132/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 133/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 134/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 135/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 136/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 137/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 138/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 139/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 140/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 141/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 142/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 143/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 144/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 145/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 146/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 147/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 148/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 149/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+Epoch 150/150
+177/177 [==============================] - 0s 2ms/step - loss: nan - accuracy: 0.7345
+45/45 [==============================] - 0s 1ms/step
+
+C:\Users\Gaurav\Desktop\Intellipaat Assignment\Artificial Intelligent\datasets\AI Assigment>
